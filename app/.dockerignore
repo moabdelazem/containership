@@ -1,0 +1,54 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Build outputs
+dist
+build
+coverage
+
+# Environment and config files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Version control
+.git
+.gitignore
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Documentation
+README.md
+docs/
+
+# Docker files
+Dockerfile*
+docker-compose*.yml
+
+# Testing
+test/
+tests/
+*.test.js
+*.spec.js

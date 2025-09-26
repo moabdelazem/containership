@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    app: nginx
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.25
+      ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+      # if the livenessProbe fail the container will restart
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 5 # default is 0
+        timeoutSeconds: 1 # default is 1
+        periodSeconds: 10 # default is 10
+        failureThreshold: 3 # defualt is 3
+        successThreshold: 1 # defualt is 1
