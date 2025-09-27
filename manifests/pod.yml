@@ -22,3 +22,11 @@ spec:
         periodSeconds: 10 # default is 10
         failureThreshold: 3 # defualt is 3
         successThreshold: 1 # defualt is 1
+
+      resources:
+        limits:
+          cpu: "500m"
+          memory: "512Mi"
+        requests:
+          cpu: "250m"
+          memory: "256Mi"
